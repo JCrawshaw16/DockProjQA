@@ -38,6 +38,12 @@
             - proto: all
               cidr_ip: 0.0.0.0/0
         register: basic_firewall
+      
+      - name: Create an EC2 key
+        ec2_key:
+          name: "ansi-docker"
+          region: "{{ region }}"
+        register: ec2_key
         
       
       - name: Launch the new EC2 Instance
@@ -45,7 +51,8 @@
                       group={{ security_group }} 
                       instance_type={{ instance_type}} 
                       image={{ image }} 
-                      wait=true 
+                      wait=true
+                      keypair = {{ec2_key}}
                       region={{ region }}
                       count={{count}}
         register: ec2
