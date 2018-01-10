@@ -8,7 +8,7 @@
     vars:
       instance_type: t2.micro
       security_group: ansible-Docker
-      image: ami-d7fed8b2
+      image: ami-167f5773
       region: us-east-2
       count: 1
 
