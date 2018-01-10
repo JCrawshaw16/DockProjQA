@@ -2,7 +2,7 @@
   - name: Provision an EC2 Instance
     hosts: local
     connection: local
-    gather_facts: False
+    gmi-0f7e566aather_facts: False
     tags: provisioning
     # Necessary Variables for creating/provisioning the EC2 Instance
     vars:
