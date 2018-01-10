@@ -8,8 +8,8 @@
     vars:
       instance_type: t2.micro
       security_group: ansible-Docker
-      image: amzn2-ami-hvm
-      region: eu-central-1
+      image: ami-d7fed8b2
+      region: us-east-2
       count: 1
 
     # Task that will be used to Launch/Create an EC2 Instance
